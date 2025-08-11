@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>富大ソフト部</title>
+  <meta name="description" content="ソフト部まとめ">
+</head>
+<body>
+
+  <!-- パスワード入力フォーム -->
+  <div id="password-form">
+    <h2>このページはパスワードで保護されています</h2>
+    <input type="password" id="password" placeholder="パスワードを入力">
+    <button onclick="checkPassword()">送信</button>
+  </div>
+
+  <!-- 本文コンテンツ（非表示） -->
+  <div id="protected-content" style="display: none;">
+    <!-- ここに元のHTMLコンテンツをすべて入れる -->
+   <head>
+        <meta charset="UTF-8">
+        <title>富大ソフト部</title>
+        <meta name="description" content="ソフト部まとめ">
+    </head>
+
+    <body>
+        <header>
+            <h1>toyama</h1>
+            <!-- こーや専門サイトから富大思い出サイトに変更 -->
+            <nav>
+            <p>永見はひたすらボイパをします。</p>
+                <h2>こーやの趣味</h2>
+                <p>ボイパをすること</p>
+            </nav>
+            <link rel="stylesheet" href="style.css">
+        </header>
+        <main>
+        <article>
+            <h2>一覧</h2>
+        <!-- 黒丸羅列 -->
+            <ul>
+                <a href="https://google.co.jp">
+                    <li>熱海</li>
+                </a>
+                <a href="https://google.co.jp">
+                    <li>北関東</li>
+                </a>
+                <a href="https://google.co.jp">
+                    <li>阿智村</li>
+                </a>
+            </ul>
+        </article>
+
+        <section>  
+            <!-- 数字羅列 -->
+            <ol>
+                <li>1年生</li>
+                <li>2年生</li>
+                <li>3年生</li>
+                <li>4年生</li>
+                <li>社会人1年目</li>
+            </ol>
+        </section>
+        </main>
+
+        <aside>
+        <!-- 表 -->
+        <table border="1">
+            <tr>
+                <th>旅行名</th>
+                <th>日にち</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://google.co.jp">
+                        <li>熱海</li>
+                    </a>
+                </td>
+                <td>1泊2日</td>
+            </tr>
+        </table>
+        <!-- ヘッダー結合 -->
+        <table border="1">
+            <tr>
+                <th colspan="2">遊び一覧</th>
+            </tr>
+            <tr>
+                <td>人狼</td>
+                <td>なんじゃもんじゃ</td>
+            </tr>
+            <tr>
+                <td>大富豪</td>
+                <td>ババ抜き</td>
+            </tr>
+        </table>
+        </aside>
+
+        <footer>
+        <!-- フォーム -->
+        <form action="example.php" method="post" name="contact-form">
+            <p>名前: 
+            <input type="text" placeholder="名字 名前">
+            </p>
+            <p>性別: 
+            <input type="radio" name="gender" value="男" id="man" checked> 
+            <label for="man">男</label>
+            <input type="radio" name="gender" value="女" id="woman"> 
+            <label for="woman">女</label>
+            <input type="radio" name="gender" value="その他" id="sonota">
+            <label for="sonota">その他</label>
+            </p>
+            <p><input type="submit" value="検索する">
+            </p>
+            <p><textarea name="message" placeholder="メッセージを入力"></textarea>
+            </p>
+        </form>
+        <a href="malto:kei0725109@gmail.com">お問い合わせ</a>
+        </footer>
+
+        <div>
+        <a href="https://google.co.jp">
+            <img src="" alt="居酒屋こーや">
+        </a>
+        </div>
+
+  <!-- JavaScript -->
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const correctPassword = "toyama2025";
+
+      if (input === correctPassword) {
+        document.getElementById("password-form").style.display = "none";
+        document.getElementById("protected-content").style.display = "block";
+      } else {
+        alert("パスワードが違います");
+      }
+    }
+  </script>
+
+</body>
+</html>
+<!--
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>富大ソフト部</title>
+        <meta name="description" content="ソフト部まとめ">
+    </head>
+
+    <body>
+        <header>
+            <h1>toyama</h1>
+            <!-- こーや専門サイトから富大思い出サイトに変更 --
+            <nav>
+            <p>永見はひたすらボイパをします。</p>
+                <h2>こーやの趣味</h2>
+                <p>ボイパをすること</p>
+            </nav>
+            <link rel="stylesheet" href="style.css">
+        </header>
+        <main>
+        <article>
+            <h2>一覧</h2>
+        <!-- 黒丸羅列 --
+            <ul>
+                <a href="https://google.co.jp">
+                    <li>熱海</li>
+                </a>
+                <a href="https://google.co.jp">
+                    <li>北関東</li>
+                </a>
+                <a href="https://google.co.jp">
+                    <li>阿智村</li>
+                </a>
+            </ul>
+        </article>
+
+        <section>  
+            <!-- 数字羅列 --
+            <ol>
+                <li>1年生</li>
+                <li>2年生</li>
+                <li>3年生</li>
+                <li>4年生</li>
+                <li>社会人1年目</li>
+            </ol>
+        </section>
+        </main>
+
+        <aside>
+        <!-- 表 --
+        <table border="1">
+            <tr>
+                <th>旅行名</th>
+                <th>日にち</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://google.co.jp">
+                        <li>熱海</li>
+                    </a>
+                </td>
+                <td>1泊2日</td>
+            </tr>
+        </table>
+        <!-- ヘッダー結合 --
+        <table border="1">
+            <tr>
+                <th colspan="2">遊び一覧</th>
+            </tr>
+            <tr>
+                <td>人狼</td>
+                <td>なんじゃもんじゃ</td>
+            </tr>
+            <tr>
+                <td>大富豪</td>
+                <td>ババ抜き</td>
+            </tr>
+        </table>
+        </aside>
+
+        <footer>
+        <!-- フォーム --
+        <form action="example.php" method="post" name="contact-form">
+            <p>名前: 
+            <input type="text" placeholder="名字 名前">
+            </p>
+            <p>性別: 
+            <input type="radio" name="gender" value="男" id="man" checked> 
+            <label for="man">男</label>
+            <input type="radio" name="gender" value="女" id="woman"> 
+            <label for="woman">女</label>
+            <input type="radio" name="gender" value="その他" id="sonota">
+            <label for="sonota">その他</label>
+            </p>
+            <p><input type="submit" value="検索する">
+            </p>
+            <p><textarea name="message" placeholder="メッセージを入力"></textarea>
+            </p>
+        </form>
+        <a href="malto:kei0725109@gmail.com">お問い合わせ</a>
+        </footer>
+
+        <div>
+        <a href="https://google.co.jp">
+            <img src="" alt="居酒屋こーや">
+        </a>
+        </div>
+    
+    </body>
+</html>
